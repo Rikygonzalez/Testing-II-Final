@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.para_bank.page.OverviewPage;
 
-public class AccountsOverviewTest extends BaseTest {
+public class OverviewTest extends BaseTest {
 
     @Test
     public void testAccountsOverview() {

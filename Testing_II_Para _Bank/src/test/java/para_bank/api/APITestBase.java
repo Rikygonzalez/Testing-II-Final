@@ -17,8 +17,8 @@ public class APITestBase {
 
         Response response = given()
                 .contentType(ContentType.URLENC)
-                .formParam("username", "juandoe")
-                .formParam("password", "12345")
+                .formParam("username", "Richard")
+                .formParam("password", "123")
                 .when()
                 .post("/login.htm")
                 .then()

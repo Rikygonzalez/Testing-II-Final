@@ -9,9 +9,9 @@ import org.para_bank.utils.ReportFactory;
 
 import java.util.Random;
 
-public class RegisterTest extends BaseTest {
+public class RegistrationTest extends BaseTest {
 
-    public RegisterTest() {
+    public RegistrationTest() {
         // Indicamos que es el test de register para que no haga el login
         isRegisterTest = true;
     }

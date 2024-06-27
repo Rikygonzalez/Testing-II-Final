@@ -6,18 +6,18 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.para_bank.page.TransferFundsPage;
+import org.para_bank.page.TransferPage;
 import org.para_bank.utils.ReportFactory;
 
 import java.time.Duration;
 
-public class TransferFundsTest extends BaseTest {
+public class TransferTest extends BaseTest {
 
     @Test
     public void testTransferFunds() {
         extentTest = extent.createTest("Transferencia de Fondos");
 
-        TransferFundsPage transferFundsPage = new TransferFundsPage(driver);
+        TransferPage transferFundsPage = new TransferPage(driver);
 
         extentTest.log(Status.INFO, "Navegando a la página de transferencia de fondos");
         transferFundsPage.openTransferFunds();

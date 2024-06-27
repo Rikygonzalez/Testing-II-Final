@@ -20,6 +20,7 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
+        System.setProperty("webdriver.edge.driver", "C:/path/to/msedgedriver.exe");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.get("https://parabank.parasoft.com/parabank/index.htm");

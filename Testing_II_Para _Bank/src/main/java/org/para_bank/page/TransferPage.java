@@ -8,7 +8,7 @@ import org.para_bank.BasePage;
 import java.time.Duration;
 import java.util.List;
 
-public class TransferFundsPage extends BasePage {
+public class TransferPage extends BasePage {
     private By transferFundsLink = By.xpath("//*[@id=\"leftPanel\"]/ul/li[3]/a");
     private By transferFundsText = By.xpath("//*[@id=\"showForm\"]/h1");
     private By amountField = By.xpath("//*[@id=\"amount\"]");
@@ -16,7 +16,7 @@ public class TransferFundsPage extends BasePage {
     private By toAccountOptions = By.xpath("//*[@id='toAccountId']/option");
     private By transferButton = By.xpath("//*[@id=\'transferForm\']/div[2]/input");
     private By successMessage = By.xpath("//*[@id='showResult']/h1");
-    public TransferFundsPage(WebDriver driver) {
+    public TransferPage(WebDriver driver) {
         super(driver);
     }
 
