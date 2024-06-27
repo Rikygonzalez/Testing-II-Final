@@ -1,9 +1,7 @@
 package org.para_bank.page;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.para_bank.BasePage;
 
 public class RegistrationPage extends BasePage {
     private By registerLink = By.xpath("//a[contains(@href, 'register.htm')]");
@@ -38,7 +36,6 @@ public class RegistrationPage extends BasePage {
                     success = true;
                 }
             } catch (Exception e) {
-                // handle exception
             }
             attempts++;
         }

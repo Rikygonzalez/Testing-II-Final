@@ -3,7 +3,6 @@ package org.para_bank.page;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.para_bank.BasePage;
 
 import java.time.Duration;
 import java.util.List;
@@ -31,12 +30,10 @@ public class TransferPage extends BasePage {
     public void fillTransferDetails(String amount) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Ingresar el monto de la transferencia
         type(amountField, amount);
         System.out.println("Entered amount: " + amount);
 
         try {
-            // Esperar a que las opciones del dropdown fromAccountId estén visibles
             wait.until(ExpectedConditions.visibilityOfElementLocated(fromAccountOptions));
             List<WebElement> fromAccountOptionsList = driver.findElements(fromAccountOptions);
             System.out.println("From Account Options: " + fromAccountOptionsList.size());
@@ -47,7 +44,6 @@ public class TransferPage extends BasePage {
                 throw new NoSuchElementException("No options available in fromAccountDropdown");
             }
 
-            // Esperar a que las opciones del dropdown toAccountId estén visibles
             wait.until(ExpectedConditions.visibilityOfElementLocated(toAccountOptions));
             List<WebElement> toAccountOptionsList = driver.findElements(toAccountOptions);
             System.out.println("To Account Options: " + toAccountOptionsList.size());
@@ -61,9 +57,7 @@ public class TransferPage extends BasePage {
                 throw new NoSuchElementException("No options available in toAccountDropdown");
             }
         } catch (TimeoutException e) {
-            // Captura y maneja la excepción de timeout si ocurre
             System.err.println("Exception occurred: " + e.getMessage());
-            // Puedes lanzar una excepción personalizada o realizar otra acción según sea necesario
             throw new RuntimeException(e);
         }
     }

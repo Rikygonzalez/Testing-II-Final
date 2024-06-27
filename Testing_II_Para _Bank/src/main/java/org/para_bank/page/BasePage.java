@@ -1,4 +1,4 @@
-package org.para_bank;
+package org.para_bank.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

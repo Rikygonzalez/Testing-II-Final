@@ -1,4 +1,4 @@
-package para_bank.api;
+package para_bank.tests.api;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

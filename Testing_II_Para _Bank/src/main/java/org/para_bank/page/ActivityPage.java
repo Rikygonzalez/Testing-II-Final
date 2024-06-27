@@ -3,7 +3,6 @@ package org.para_bank.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.para_bank.BasePage;
 
 public class ActivityPage extends BasePage {
 

@@ -1,4 +1,4 @@
-package para_bank.api;
+package para_bank.tests.api;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

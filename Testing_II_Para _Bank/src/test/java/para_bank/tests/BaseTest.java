@@ -27,18 +27,15 @@ public class BaseTest {
         extent = ReportFactory.getInstance();
         extent.attachReporter(spark);
 
-        // Lógica para verificar el tipo de test que se está ejecutando
         if (isRegisterTest) {
-            // No realizar login en el test de register
             System.out.println("Skipping login for register test");
             extentTest = extent.createTest("Base_Test");
             extentTest.log(Status.INFO, "Inicia el test register...");
         } else {
             extentTest = extent.createTest("Base_Test");
             extentTest.log(Status.INFO, "Inicia los test...");
-            // Realizar login para todos los otros tests
             LoginPage loginPage = new LoginPage(driver);
-            loginPage.login("juandoe", "12345");
+            loginPage.login("Richard", "123");
         }
     }
 

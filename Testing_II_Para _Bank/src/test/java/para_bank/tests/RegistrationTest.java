@@ -12,7 +12,6 @@ import java.util.Random;
 public class RegistrationTest extends BaseTest {
 
     public RegistrationTest() {
-        // Indicamos que es el test de register para que no haga el login
         isRegisterTest = true;
     }
 
@@ -33,12 +32,11 @@ public class RegistrationTest extends BaseTest {
         } else {
             extentTest.log(Status.INFO, "Llenando el formulario de registro");
 
-            // Generar un nombre de usuario único usando un número aleatorio
             Random random = new Random();
-            String uniqueUsername = "juandoe" + random.nextInt(10000);
+            String uniqueUsername = "Richard" + random.nextInt(10000);
             extentTest.log(Status.INFO, "Usando el nombre de usuario: " + uniqueUsername);
 
-            registrationPage.fillRegistrationForm("Juan", "Doe", "123 Main St", "Anytown", "CA", "90210", "555-1234", "123-45-6789", uniqueUsername, "password");
+            registrationPage.fillRegistrationForm("Rich", "ard", "123 Main St", "Anytown", "CA", "90210", "555-1234", "123-45-6789", uniqueUsername, "password");
             ReportFactory.takeScreenshot(extentTest, "FormularioLleno", driver);
 
             registrationPage.submitRegistration();

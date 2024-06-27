@@ -3,14 +3,14 @@ package para_bank.tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.para_bank.page.OpenAccountPage;
+import org.para_bank.page.OpenAccPage;
 
-public class OpenAccountTest extends BaseTest {
+public class OpenAccTest extends BaseTest {
 
     @Test
     @Tag("Open Account")
     public void testOpenNewAccount() {
-        OpenAccountPage openAccountPage = new OpenAccountPage(driver);
+        OpenAccPage openAccountPage = new OpenAccPage(driver);
         openAccountPage.openNewAccount();
         openAccountPage.selectSavingsAccount();
         openAccountPage.submitOpenAccount();

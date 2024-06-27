@@ -2,7 +2,6 @@ package org.para_bank.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.para_bank.BasePage;
 
 public class LoginPage extends BasePage {
 
